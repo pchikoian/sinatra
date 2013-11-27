@@ -27,4 +27,8 @@ class App < Sinatra::Base
     "Hello world! hi"
   end
 
+  post '/auth' do
+    $logger.info request.body
+    request
+  end
 end
