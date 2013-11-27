@@ -14,7 +14,7 @@ class App < Sinatra::Base
     Dir.mkdir('logs') unless File.exist?('logs')
 
     $logger = Logger.new('logs/common.log','weekly')
-    $logger.level = Logger::WARN
+    $logger.level = Logger::DEBUG
 
     # Spit stdout and stderr to a file during production
     # in case something goes wrong
